@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浏览器首屏渲染测试</title>
+  <meta name="description" content="有样式有内容有外链异步脚本">
+</head>
+
+<body>
+
+  <div id="div1" style="height: 50px; background-color: red;">
+    我的DIV1我的DIV1我的DIV1我的DIV1我的DIV1
+  </div>
+  <script src="./js/main.js" async></script>
+  <div id="div2" style="height: 50px; background-color: green;">
+    我是DIV2我是DIV2我是DIV2我是DIV2我是DIV2
+  </div>
+  <div id="div3"></div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DocumentContentLoad触发时机测试</title>
+    <meta name="description" content="页面外链js脚本,defer异步加载，置于body中部">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="脚本会异步加载但是直到页面首屏渲染完成后才执行，DCL会在脚本执行结束后触发">
+</head>
+
+<body>
+    <div id="div1" style="height: 50px; background-color: red;">
+        我的DIV1我的DIV1我的DIV1我的DIV1我的DIV1
+    </div>
+    <script src="./js/main.js" defer></script>
+    <div id="div2" style="height: 50px; background-color: green;">
+        我是DIV2我是DIV2我是DIV2我是DIV2我是DIV2
+    </div>
+    <div id="div3"></div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DocumentContentLoad触发时机测试</title>
+    <meta name="description" content="页面内嵌js脚本，脚本执行后触发DCL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="div1" style="height: 50px; background-color: red;">
+        我的DIV1我的DIV1我的DIV1我的DIV1我的DIV1
+    </div>
+    <script>
+        (function () {
+            for (var i = 0; i < 1000000; i++) {
+                document.querySelector("#div1");
+            }
+        })()
+    </script>
+    <div id="div2" style="height: 50px; background-color: green;">
+        我是DIV2我是DIV2我是DIV2我是DIV2我是DIV2
+    </div>
+    <div id="div3"></div>
+</body>
+
+</html>

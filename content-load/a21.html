@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DocumentContentLoad触发时机测试</title>
+    <meta name="description" content="页面外链js脚本,async异步加载, 置于body标签中部">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="DCL的触发在页面DOM加载结束时就触发了，之后脚本加载与页面首屏渲染同步进行，脚本执行完触发L事件">
+</head>
+
+<body>
+    <div id="div1" style="height: 50px; background-color: red;">
+        我的DIV1我的DIV1我的DIV1我的DIV1我的DIV1
+    </div>
+    <script src="./js/a21.js" async></script>
+    <div id="div2" style="height: 50px; background-color: green;">
+        我是DIV2我是DIV2我是DIV2我是DIV2我是DIV2
+    </div>
+    <div id="div3"></div>
+</body>
+
+</html>
