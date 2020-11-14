@@ -2,6 +2,10 @@
 
 本文旨在测试不同脚本加载方式对`DCL和L`事件触发的影响，共分如下12种情况：
 
+> `DCL` = DOMContentLoaded
+
+> `L` = Load
+
 - [页面内嵌js脚本，脚本执行后触发DCL](a11.html)
 - [页面外链js脚本,同步加载，置于header中](a12.html)
 - [页面外链js脚本,同步加载，置于body头部](a13.html)
